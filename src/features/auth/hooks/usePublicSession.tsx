@@ -2,7 +2,7 @@ import { type Session } from "next-auth";
 import { useContext } from "react";
 import { PublicSessionContext } from "../contexts/PublicSessionContext";
 
-export function useSession(): Session | null {
+export function usePublicSession(): Session | null {
   const context = useContext(PublicSessionContext);
 
   if (!context) {

@@ -1,0 +1,7 @@
+{
+  "name": "@nomey/sse",
+  "version": "1.0.0",
+  "description": "Server-Sent Events (SSE) feature module for real-time notifications",
+  "main": "index.ts",
+  "type": "module"
+}

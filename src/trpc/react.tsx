@@ -46,7 +46,8 @@ export function TRPCReactProvider(props: { children: React.ReactNode }) {
       links: [
         loggerLink({
           enabled: (op) =>
-            process.env.NODE_ENV === "development" ||
+            (typeof window !== "undefined" &&
+              window.location.hostname === "localhost") ||
             (op.direction === "down" && op.result instanceof Error),
         }),
         httpBatchStreamLink({
@@ -73,6 +74,7 @@ export function TRPCReactProvider(props: { children: React.ReactNode }) {
 
 function getBaseUrl() {
   if (typeof window !== "undefined") return window.location.origin;
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return `http://localhost:${process.env.PORT ?? 3000}`;
+  // For server-side rendering, we'll use a default localhost URL
+  // In production, this should be configured properly via NEXT_PUBLIC_ env vars
+  return "http://localhost:3000";
 }
