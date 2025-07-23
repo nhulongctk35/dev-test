@@ -62,58 +62,6 @@ npm run dev
 
 > ⚠️ **Warning:** The T3 stack hard-enforces environment variables to provide type-safety. The project will not build without all environment variables in place. Contact a dev to get their variables to quickly get yourself up and running.
 
-## My Updates
-
-We've recently added several major features to enhance the Nomey web app experience:
-
-### Real-Time Notifications System (SSE)
-
-Implemented a comprehensive Server-Sent Events system that provides real-time notifications and system updates to users. This includes:
-
-- **Live Notifications**: Success, error, warning, and info notifications delivered instantly
-- **Broadcast Messages**: System-wide announcements to all connected users
-- **User Mentions**: Real-time notifications when users are mentioned in comments or posts
-- **Video Processing Updates**: Live status updates for video upload and processing
-- **Document Collaboration**: Real-time notifications for collaborative document editing
-
-The system includes a demo page at `/sse-demo` where you can test the real-time functionality and view connection statistics.
-
-![SSE Demo Interface](./image0.png)
-
-### Video Upload System (Reels)
-
-Added a new video upload feature for creating and sharing reels:
-
-- **Mux Integration**: Seamless video upload using Mux's robust video infrastructure
-- **Progress Tracking**: Real-time upload progress with visual feedback
-- **Automatic Processing**: Videos are automatically processed and optimized for playback
-- **User Authentication**: Secure upload system requiring user authentication
-
-Access the upload interface at `/reels/upload` to start creating video content.
-
-![Reels Upload Interface](./image1.png)
-
-### Email Templates System
-
-Developed a comprehensive email system using React Email and Resend:
-
-- **React Email Templates**: Modern, responsive email templates built with React components
-- **Template Management**: Organized template system with props validation and type safety
-- **Development Tools**: VS Code integration for live email preview during development
-- **Delivery Service**: Reliable email delivery through Resend integration
-
-![Email Templates System](./image2.png)
-
-### Additional Notes
-
-- All new features include comprehensive error handling and logging
-- The SSE system automatically handles connection management and reconnection
-- Video uploads support various formats and include automatic optimization
-- Email templates are fully responsive and tested across major email clients
-- Development mode includes helpful debugging tools and test functionality
-
-These updates significantly enhance the real-time capabilities and content creation features of the Nomey platform, providing users with a more interactive and engaging experience.
-
 ## Learn More
 
 - [Nomey Documentation (WIP)](https://nomey.mintlify.app/)
